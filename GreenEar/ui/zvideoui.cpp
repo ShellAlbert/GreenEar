@@ -220,7 +220,7 @@ void ZVideoUI::ZSlotButtonClicked()
 
     }else if(tb==this->m_tbVerify)
     {
-
+        emit this->ZSigCurveUpdate();
     }else if(tb==this->m_tbVolume)
     {
         emit this->ZSigVolumeSet();

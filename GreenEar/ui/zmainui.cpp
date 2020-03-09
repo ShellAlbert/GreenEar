@@ -6,6 +6,7 @@
 #include <QDebug>
 #include "zgblparam.h"
 #include "protocol/zmodbusprotocol.h"
+#include "ui/zcurvedialog.h"
 ZMainUI::ZMainUI(QWidget *parent):QWidget(parent)
 {
     this->setWindowTitle(tr("BypassAPP"));
@@ -76,6 +77,7 @@ ZMainUI::ZMainUI(QWidget *parent):QWidget(parent)
     QObject::connect(this->m_videoUI,SIGNAL(ZSigArrowClicked(qint32)),this,SLOT(ZSlotArrow(qint32)));
     QObject::connect(this->m_videoUI,SIGNAL(ZSigVolumeCtl(qint32,bool)),this,SLOT(ZSlotVolumeCtl(qint32,bool)));
     QObject::connect(this->m_videoUI,SIGNAL(ZSigVolumeSet()),this,SLOT(ZSlotVolumeSet()));
+    QObject::connect(this->m_videoUI,SIGNAL(ZSigCurveUpdate()),this,SLOT(ZSlotCurveUpdate()));
 
     this->m_hLayMain=new QHBoxLayout;
     this->m_hLayMain->setContentsMargins(0,0,0,0);
@@ -367,6 +369,12 @@ bool ZMainUI::ZParseAckFrame(ZElement *ele)
         qDebug()<<"normal Ack";
     }
     return true;
+}
+void ZMainUI::ZSlotCurveUpdate()
+{
+    ZCurveDialog dia(this);
+    dia.setGeometry(0,0,this->width(),this->height());
+    dia.exec();
 }
 void ZMainUI::ZSlotVolumeCtl(qint32 which,bool inc)
 {

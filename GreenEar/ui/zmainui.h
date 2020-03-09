@@ -52,6 +52,7 @@ private slots:
     void ZSlotRecord();
     void ZSlotPlayback();
     void ZSlotArrow(qint32 direction);
+    void ZSlotCurveUpdate();
     void ZSlotVolumeCtl(qint32 which,bool inc);
     void ZSlotVolumeSet();
 private:

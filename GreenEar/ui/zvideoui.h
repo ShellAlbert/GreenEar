@@ -26,6 +26,7 @@ protected:
 signals:
     void ZSigArrowClicked(qint32 direction);
     void ZSigRdBattery();
+    void ZSigCurveUpdate();
     void ZSigVolumeCtl(qint32 which,bool inc);
     void ZSigVolumeSet();
 private slots:

@@ -32,7 +32,8 @@ SOURCES += \
     zgblparam.cpp \
     thread/ztimeoutscanthread.cpp \
     protocol/zmodbusprotocol.cpp \
-    greenear.cpp
+    greenear.cpp \
+    ui/zcurvedialog.cpp
 
 HEADERS += \
         ui/zmainui.h \
@@ -41,7 +42,8 @@ HEADERS += \
     zgblparam.h \
     thread/ztimeoutscanthread.h \
     protocol/zmodbusprotocol.h \
-    greenear.h
+    greenear.h \
+    ui/zcurvedialog.h
 
 RESOURCES += \
     appres.qrc

@@ -25,13 +25,7 @@ QToolButton#ZVideoUIButton:pressed{
 
 QDialog{
     border:none;
-    background-color:
-    qlineargradient(spread:pad,
-    x1:0, y1:0,
-    x2:0, y2:1,
-    stop:0 #457fca,
-    stop:1 #5691c8);
-    color:white;
+    background-color:#008000;
 }
 QToolTip {
         border: 0px;
