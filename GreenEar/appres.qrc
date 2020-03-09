@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/skinfile">
+        <file>skin/default.qss</file>
+    </qresource>
+    <qresource prefix="/fontfile">
+        <file>font/fontawesome-webfont.ttf</file>
+    </qresource>
+</RCC>
