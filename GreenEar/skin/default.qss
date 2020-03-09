@@ -46,3 +46,7 @@ QProgressBar::chunk {
         border: none;
         background: rgb(0, 160, 230);
 }
+QLabel#QLabel_PointNum{
+background-color: transparent;
+color:white;
+}

@@ -77,20 +77,20 @@ ZCurveDialog::ZCurveDialog(QWidget *parent):QDialog(parent)
     this->m_llPointNum->setObjectName("QLabel_PointNum");
 
     this->m_btnData=new QToolButton;
-    this->m_btnData->setText(tr("数据"));
+    this->m_btnData->setText(tr("DATA"));
     QObject::connect(this->m_btnData,SIGNAL(clicked()),this,SLOT(ZSlotData()));
 
     this->m_btnCalc=new QToolButton;
-    this->m_btnCalc->setText(tr("计算"));
+    this->m_btnCalc->setText(tr("CALC"));
     QObject::connect(this->m_btnCalc,SIGNAL(clicked()),this,SLOT(ZSlotCalculate()));
 
     this->m_btnCallOne=new QToolButton;
-    this->m_btnCallOne->setText(tr("召唤1"));
-    QObject::connect(this->m_btnCallOne,SIGNAL(clicked()),this,SLOT(ZSlotDevice()));
+    this->m_btnCallOne->setText(tr("CALL1"));
+    QObject::connect(this->m_btnCallOne,SIGNAL(clicked()),this,SLOT(ZSlotCallOne()));
 
     this->m_btnCallAll=new QToolButton;
-    this->m_btnCallAll->setText(tr("召唤2"));
-    QObject::connect(this->m_btnCallAll,SIGNAL(clicked()),this,SLOT(ZSlotAbout()));
+    this->m_btnCallAll->setText(tr("CALL2"));
+    QObject::connect(this->m_btnCallAll,SIGNAL(clicked()),this,SLOT(ZSlotCallAll()));
 
     this->m_hLayBtns=new QHBoxLayout;
     this->m_hLayBtns->addWidget(this->m_llPointNum);
